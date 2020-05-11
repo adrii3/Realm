@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.MainActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:ignore="MissingConstraints">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            tools:ignore="MissingConstraints">
+
+            <TextView
+                android:layout_marginTop="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Introduce los datos del jugador"
+                android:textAlignment="center"
+                android:textSize="30dp"
+                android:textStyle="bold"
+                tools:ignore="MissingConstraints" />
+
+            <EditText
+                android:id="@+id/mainActivityEditTextNombre"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Nombre"
+                android:layout_marginRight="20dp"
+                android:layout_marginLeft="20dp"/>
+
+            <EditText
+                android:id="@+id/mainActivityEditTextDni"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="DNI"
+                android:layout_marginRight="20dp"
+                android:layout_marginLeft="20dp"/>
+
+            <EditText
+                android:id="@+id/mainActivityEditTextEquipo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Equipo"
+                android:layout_marginRight="20dp"
+                android:layout_marginLeft="20dp"/>
+            <View
+                android:layout_height="30dp"
+                android:layout_width="match_parent"/>
+
+            <Button
+                android:id="@+id/mainActivityBotonGuardar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Guardar jugador"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"/>
+            <Button
+                android:id="@+id/mainActivityBotonMostrarPorNombre"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Mostrar por nombre"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"/>
+            <Button
+                android:id="@+id/mainActivityBotonMostrarJugadores"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Mostrar jugadores"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"/>
+            <View
+                android:layout_height="30dp"
+                android:layout_width="match_parent"/>
+
+            <EditText
+                android:id="@+id/mainActivityEditTextId"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="ID"
+                android:layout_marginRight="20dp"
+                android:layout_marginLeft="20dp"/>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                tools:ignore="MissingConstraints">
+
+                <Button
+                    android:id="@+id/mainActivityBotonMostrarPorId"
+                    android:layout_width="120dp"
+                    android:layout_height="wrap_content"
+                    android:text="Mostrar por id"
+                    android:layout_marginLeft="70dp"/>
+                <Button
+                    android:id="@+id/mainActivityBorrarJugador"
+                    android:layout_width="120dp"
+                    android:layout_height="wrap_content"
+                    android:text="Borrar Jugador"
+                    android:layout_marginLeft="20dp"/>
+
+            </LinearLayout>
+
+            <EditText
+                android:id="@+id/mainActivityEditTextCambiarEquipoId"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="ID"
+                android:layout_marginRight="20dp"
+                android:layout_marginLeft="20dp"/>
+
+            <EditText
+                android:id="@+id/mainActivityEditTextCambiarEquipo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Nuevo equipo"
+                android:layout_marginRight="20dp"
+                android:layout_marginLeft="20dp"/>
+
+            <Button
+                android:id="@+id/mainActivityBotonCambiarEquipo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Cambiar equipo"
+                android:layout_marginRight="20dp"
+                android:layout_marginLeft="20dp"/>
+
+        </LinearLayout>
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>
