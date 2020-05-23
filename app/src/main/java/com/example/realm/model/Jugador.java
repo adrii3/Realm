@@ -4,11 +4,15 @@ import io.realm.RealmList;
 import io.realm.RealmObject;
 import io.realm.annotations.PrimaryKey;
 
+
 public class Jugador extends RealmObject {
 
     @PrimaryKey
     private int idJugador;
     private String nombre;
+    private String apellido;
+    private int edad;
+    private int telefono;
     private String dni;
     private String equipo;
 
@@ -33,6 +37,30 @@ public class Jugador extends RealmObject {
         return dni;
     }
 
+    public String getApellido() {
+        return apellido;
+    }
+
+    public void setApellido(String apellido) {
+        this.apellido = apellido;
+    }
+
+    public int getEdad() {
+        return edad;
+    }
+
+    public void setEdad(int edad) {
+        this.edad = edad;
+    }
+
+    public int getTelefono() {
+        return telefono;
+    }
+
+    public void setTelefono(int telefono) {
+        this.telefono = telefono;
+    }
+
     public void setDni(String dni) {
         this.dni = dni;
     }
@@ -54,4 +82,13 @@ public class Jugador extends RealmObject {
     }
 
     private RealmList<Liga> ligas;
+
+    @Override
+    public String toString() {
+        return "Id: '" + idJugador + '\'' +
+                ", Nombre: '" + nombre + '\'' +
+                ", Apellido '" + apellido + '\'' +
+                ", Teléfono '" + telefono + '\'' +
+                ", Dirección '" + edad + '\'' + "\n";
+    }
 }

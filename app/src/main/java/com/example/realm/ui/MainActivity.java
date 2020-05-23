@@ -3,16 +3,19 @@ package com.example.realm.ui;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import com.example.realm.Migration;
 import com.example.realm.R;
 import com.example.realm.model.Jugador;
 import com.example.realm.operaciones.OperacionesJugador;
 
 import io.realm.Realm;
+import io.realm.RealmConfiguration;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -100,5 +103,11 @@ public class MainActivity extends AppCompatActivity {
                 toast.show();
             }
         });
+        RealmConfiguration configuration = new RealmConfiguration.Builder()
+                .name(Realm.DEFAULT_REALM_NAME)
+                .schemaVersion(1)
+                .migration(new Migration())
+                .build();
+        Realm.setDefaultConfiguration(configuration);
     }
 }
