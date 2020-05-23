@@ -35,12 +35,12 @@ public class Migration implements RealmMigration {
 
         if(oldVersion == 0) {
             Log.d("Migration", "actualitzant a la versió 1");
-            schema.get("User")
-                    .addField("nombre", String.class)
+            schema.get("Jugador")
                     .addField("apellido", String.class)
-                    .addField("telefono", int.class)
-                    .addField("edad", String.class)
-                    .removeField("dni");
+                    .addField("telefono", String.class)
+                    .addField("edad", int.class)
+                    .removeField("dni")
+                    .removeField("equipo");
             oldVersion++;
         }
     }
