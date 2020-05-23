@@ -7,6 +7,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.realm.Migration;
@@ -20,7 +21,7 @@ import io.realm.RealmConfiguration;
 public class MainActivity extends AppCompatActivity {
 
     private EditText nombreEdit, dniEdit, equipoEdit, idCambioEdit, cambioEquipoEdit, cambioEquipoEditId;
-    private Button botonGuardar, botonMostrarJugadores, botonMostrarPorNombre, botonMostrarPorId, botonCambiarEquipo, botonBorrar;
+    private Button botonGuardar, botonMostrarJugadores, botonMostrarPorNombre, botonMostrarPorId, botonCambiarEquipo, botonBorrar, botonMigracion;
     private Jugador jugador;
     private Realm realm;
 
@@ -103,6 +104,16 @@ public class MainActivity extends AppCompatActivity {
                 toast.show();
             }
         });
+
+        botonMigracion = findViewById(R.id.migration_button);
+        botonMigracion.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast toast= Toast.makeText(getApplicationContext(),jugador.toString(), Toast.LENGTH_SHORT);
+                toast.show();
+            }
+        });
+
         RealmConfiguration configuration = new RealmConfiguration.Builder()
                 .name(Realm.DEFAULT_REALM_NAME)
                 .schemaVersion(1)
